@@ -1,0 +1,11 @@
+<Bindings>
+	<Binding name="MANACODE_TALENTS_WINDOW" header="MANACODE_TALENTS">
+		HTP_TalentsBinding("window")
+	</Binding>
+	<Binding name="MANACODE_TALENTS_QUICK">
+		HTP_TalentsBinding("quick")
+	</Binding>
+	<Binding name="MANACODE_TALENTS_SETTINGS">
+		HTP_TalentsBinding("settings")
+	</Binding>
+</Bindings>
