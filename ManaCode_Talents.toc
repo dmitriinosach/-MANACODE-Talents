@@ -1,0 +1,93 @@
+## Interface: 30300
+## Title: [manacode] Talents
+## Title-ruRU: [manacode] Ветки |cff808080— билдер, ветки всех классов и обмен|r
+## Notes: Talent builds: builder, every class, inspect, compare and sharing with other players.
+## Notes-ruRU: Ветки талантов: билдер, все классы, осмотр, сравнение и обмен с игроками
+## Title-esES: [manacode] Talentos
+## Title-esMX: [manacode] Talentos
+## Notes-esES: Planificador de talentos para todas las clases, inspección, comparación e intercambio de configuraciones.
+## Notes-esMX: Planificador de talentos para todas las clases, inspección, comparación e intercambio de configuraciones.
+## Author: ManaCode, Alonaboreals
+## Version: 1.3.0
+## X-Distribution: Standard
+## SavedVariables: HTP_TalentsDB
+
+libs\manacode\keycap.lua
+init.lua
+core\locale.lua
+locale\enUS.lua
+locale\ruRU.lua
+locale\esES.lua
+data\specs.lua
+core\context.lua
+core\untrusted.lua
+core\talents.lua
+core\builds.lua
+core\share.lua
+core\inspect.lua
+core\glyphs.lua
+core\sets.lua
+core\alts.lua
+core\gear.lua
+core\bars.lua
+core\preview.lua
+core\learn.lua
+core\view.lua
+core\follow.lua
+core\quick.lua
+core\cast.lua
+data\builds\warrior.lua
+data\builds\paladin.lua
+data\builds\hunter.lua
+data\builds\rogue.lua
+data\builds\priest.lua
+data\builds\deathknight.lua
+data\builds\shaman.lua
+data\builds\mage.lua
+data\builds\warlock.lua
+data\builds\druid.lua
+data\talentgrids\warrior.lua
+data\talentgrids\paladin.lua
+data\talentgrids\hunter.lua
+data\talentgrids\rogue.lua
+data\talentgrids\priest.lua
+data\talentgrids\deathknight.lua
+data\talentgrids\shaman.lua
+data\talentgrids\mage.lua
+data\talentgrids\warlock.lua
+data\talentgrids\druid.lua
+data\glyphs.lua
+data\glyphitems.lua
+data\glyphpicks\deathknight.lua
+data\glyphpicks\hunter.lua
+data\glyphpicks\mage.lua
+data\glyphpicks\paladin.lua
+data\glyphpicks\priest.lua
+data\glyphpicks\warlock.lua
+core\glyphcat.lua
+ui\theme.lua
+ui\kit.lua
+ui\about.lua
+ui\tree.lua
+ui\glyphs.lua
+ui\glyphcat.lua
+ui\dialogs.lua
+ui\actions.lua
+ui\compare.lua
+ui\window.lua
+ui\parade.lua
+ui\murlocs.lua
+ui\goblins.lua
+ui\lich.lua
+ui\gnomeray.lua
+ui\spidertank.lua
+ui\brew.lua
+ui\modelview.lua
+ui\barslib.lua
+ui\mini.lua
+ui\replace.lua
+ui\nativebtn.lua
+ui\settings.lua
+ui\options.lua
+ui\inspectbtn.lua
+ui\quick.lua
