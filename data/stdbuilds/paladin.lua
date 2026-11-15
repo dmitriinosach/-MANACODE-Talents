@@ -1,0 +1,91 @@
+local ADDON, ns = ...
+ns.stdBuilds = ns.stdBuilds or {}
+ns.stdBuilds.PALADIN = {
+    { name = "PvE", variant = "ret_agi",
+      title = { ru = "Воздаяние (рейд)", en = "Retribution (raid)", es = "Reprensión (banda)" },
+      ranks = {
+          { 0, 5 },
+          { 5, 5, 0, 0, 0, 1 },
+          { 0, 5, 2, 3, 2, 0, 5, 1, 2, 0, 3, 3, 3, 1, 3, 0, 2, 1, 3, 3, 2, 3, 1, 3, 3, 1 },
+      },
+      glyphs = { major = { 43869, 41092, 41099 }, minor = { 43368, 43367, 43340 } },
+      note = {
+          ru = "Основная ветка 5/11/55: весь урон Воздаяния, «Печать безупречности» и «Священная жертва» для рейда. Символ печати отмщения добирает мастерство; когда кап набран вещами, ставьте символ экзорцизма.",
+          en = "Main 5/11/55 build: all Retribution damage, Seals of the Pure and Divine Sacrifice for the raid. Glyph of Seal of Vengeance fills expertise; once gear caps it, use Glyph of Exorcism.",
+          es = "Rama principal 5/11/55: todo el daño de Reprensión, Sellos de los puros y Sacrificio divino para la banda. El glifo de Sello de venganza completa la pericia; con el tope en el equipo, usa el glifo de Exorcismo.",
+      } },
+    { name = "Retribution (Божественный страж)", variant = "ret_agi",
+      title = { ru = "Воздаяние (сейв рейда)", en = "Retribution (raid cooldown)", es = "Reprensión (defensa de banda)" },
+      ranks = {
+          {},
+          { 5, 5, 3, 1, 0, 1, 0, 0, 2, 2 },
+          { 0, 5, 2, 3, 0, 0, 5, 1, 1, 0, 3, 3, 3, 1, 3, 0, 2, 1, 3, 3, 2, 3, 1, 3, 3, 1 },
+      },
+      glyphs = { major = { 43869, 41092, 41099 }, minor = { 43368, 43367, 43340 } },
+      note = {
+          ru = "Ветка 0/19/52 под Короля-лича и бои с тяжёлым уроном по рейду: «Божественный страж» режет урон рейду по команде, «Улучшенный молот правосудия» чаще оглушает валь'кир. Урона чуть меньше, чем в основной.",
+          en = "The 0/19/52 build for the Lich King and heavy raid damage: Divine Guardian cuts raid damage on call, Improved Hammer of Justice stuns Val'kyr more often. Slightly less damage than the main build.",
+          es = "Rama 0/19/52 para el Rey Exánime y combates con mucho daño a la banda: Guardián divino reduce el daño a la banda, Martillo de Justicia mejorado aturde más a menudo a las Val'kyr. Algo menos de daño que la principal.",
+      } },
+    { name = "Holy (Стандарт: Божественный страж, Аура благочестия)", variant = "holy",
+      title = { ru = "Свет (рейд)", en = "Holy (raid)", es = "Sagrado (banda)" },
+      glyphs = { major = { 41106, 41109, 45741 }, minor = { 43367, 43365, 43366 } },
+      note = {
+          ru = "Основная ветка лекаря танков: «Священная жертва» с «Божественным стражем» и «Улучшенная аура благочестия» для рейда. Если в рейде уже есть паладин Света с этой аурой, берите ветку на крит.",
+          en = "Main tank healer build: Divine Sacrifice with Divine Guardian and Improved Devotion Aura for the raid. If another Holy paladin already brings the aura, take the crit build.",
+          es = "Rama principal del sanador de tanques: Sacrificio divino con Guardián divino y Aura de devoción mejorada para la banda. Si otro paladín Sagrado ya trae el aura, usa la rama de crítico.",
+      } },
+    { name = "Holy (crit 51/5/15)", variant = "holy",
+      title = { ru = "Свет (крит)", en = "Holy (crit)", es = "Sagrado (crítico)" },
+      ranks = {
+          { 5, 0, 3, 5, 0, 1, 5, 0, 0, 2, 1, 0, 1, 3, 0, 5, 3, 1, 0, 0, 5, 1, 5, 2, 2, 1 },
+          { 5 },
+          { 0, 5, 2, 3, 0, 0, 5 },
+      },
+      glyphs = { major = { 41106, 41109, 45741 }, minor = { 43367, 43365, 43366 } },
+      note = {
+          ru = "Вторая ветка лекаря: «Божественность» и крит из Воздаяния («Приговор», «Сердце рыцаря») вместо защитных талантов рейда. Больше исцеления и маны от критов; берите, когда сейвы рейду даёт другой паладин.",
+          en = "Second healer build: Divinity and crit from Retribution (Conviction, Heart of the Crusader) instead of the raid defensive talents. More healing and mana from crits; take it when another paladin covers the raid cooldowns.",
+          es = "Segunda rama de sanador: Divinidad y crítico de Reprensión (Convicción, Corazón del cruzado) en lugar de los talentos defensivos de banda. Más sanación y maná por críticos; úsala cuando otro paladín cubre las defensas de la banda.",
+      } },
+    { name = "Protection (Стандарт: трэт, Крестовый поход)", variant = "prot_tank",
+      title = { ru = "Защита (рейд)", en = "Protection (raid)", es = "Protección (banda)" },
+      ranks = {
+          {},
+          { 0, 5, 0, 0, 5, 1, 3, 5, 2, 0, 3, 1, 0, 2, 3, 1, 1, 3, 3, 3, 3, 1, 2, 3, 0, 1 },
+          { 5, 0, 2, 3, 0, 0, 5, 0, 2, 0, 0, 3 },
+      },
+      glyphs = { major = { 45745, 43869, 45742 }, minor = { 43368, 43367, 43365 } },
+      note = {
+          ru = "Рейдовая ветка танка 0/51/20: вся выживаемость Защиты и крит с «Священной войной» из Воздаяния, без «Расплаты». Два очка из «Погони за справедливостью» можно отдать в «Оправдание» или «Правосудие праведников».",
+          en = "Raid tank build 0/51/20: all Protection survivability plus crit and Crusade from Retribution, no Reckoning. The two points in Pursuit of Justice may go to Vindication or Judgements of the Just.",
+          es = "Rama de tanque de banda 0/51/20: toda la supervivencia de Protección más crítico y Cruzada de Reprensión, sin Ajuste de cuentas. Los dos puntos de Búsqueda de la justicia pueden ir a Vindicación o Sentencias del justo.",
+      } },
+    { name = "Protection (Мастер аур: рейд-саппорт)", drop = true },
+    { name = "Protection (dungeons)", variant = "prot_tank",
+      title = { ru = "Защита (подземелья, пачки)", en = "Protection (dungeons, packs)", es = "Protección (mazmorras, grupos)" },
+      ranks = {
+          {},
+          { 0, 5, 0, 0, 5, 1, 3, 5, 2, 0, 0, 1, 3, 2, 3, 1, 1, 3, 3, 3, 3, 1, 2, 3, 2, 1 },
+          { 5, 0, 2, 3, 0, 2, 0, 1, 2, 0, 0, 3 },
+      },
+      glyphs = { major = { 45745, 45742, 41092 }, minor = { 43368, 43367, 43365 } },
+      note = {
+          ru = "Ветка 0/53/18 для подземелий и треша: «Печать повиновения» и «Расплата» дают угрозу по пачке, «Оправдание» и «Правосудие праведников» ослабляют врагов, когда этого не делает рейд.",
+          en = "The 0/53/18 build for dungeons and trash: Seal of Command and Reckoning give threat on packs, Vindication and Judgements of the Just weaken enemies when the raid does not.",
+          es = "Rama 0/53/18 para mazmorras y morralla: Sello de orden y Ajuste de cuentas dan amenaza en grupos, Vindicación y Sentencias del justo debilitan a los enemigos cuando la banda no lo hace.",
+      } },
+    { name = "Protection (dps)", variant = "prot_dps",
+      title = { ru = "Защита (дд)", en = "Protection (dps)", es = "Protección (daño)" },
+      ranks = {
+          {},
+          { 0, 5, 0, 0, 5, 1, 3, 5, 2, 2, 0, 1, 5, 2, 3, 2, 1, 0, 0, 3, 3, 1, 2, 3, 2, 1 },
+          { 5, 0, 2, 3, 0, 0, 5, 1, 0, 0, 0, 3 },
+      },
+      glyphs = { major = { 43869, 41092, 45742 }, minor = { 43368, 43367, 43340 } },
+      note = {
+          ru = "Сборка Защиты на урон, 0/52/19: «Расплата» целиком, «Печать повиновения», крит из Воздаяния, без «Ревностного защитника» и «Оплота». Сильна на пачках и в соло; главного танка не заменяет.",
+          en = "A damage Protection build, 0/52/19: full Reckoning, Seal of Command, crit from Retribution, no Ardent Defender or Redoubt. Strong on packs and solo; not a main tank build.",
+          es = "Rama de Protección para daño, 0/52/19: Ajuste de cuentas completo, Sello de orden, crítico de Reprensión, sin Defensor candente ni Reducto. Fuerte en grupos y en solitario; no sustituye al tanque principal.",
+      } },
+}
