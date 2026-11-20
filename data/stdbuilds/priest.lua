@@ -1,0 +1,70 @@
+local ADDON, ns = ...
+ns.stdBuilds = ns.stdBuilds or {}
+ns.stdBuilds.PRIEST = {
+    { name = "Discipline (Стандарт: живучесть и мана)", variant = "disc",
+      title = { ru = "Послушание (рейд, щиты)", en = "Discipline (raid, shields)", es = "Disciplina (banda, escudos)" },
+      glyphs = { major = { 42408, 45756, 42409 }, minor = { 43374, 43370, 43371 } },
+      note = {
+          ru = "Основная ветка для рейда: щиты по рейду, Исповедь по танку. Защита от заклинаний снижает урон по вам самим.",
+          en = "The main raid build: shields across the raid, Penance on the tank. Spell Warding cuts the spell damage you take.",
+          es = "La rama principal de banda: escudos por toda la banda y Penitencia al tanque. Custodia de hechizos reduce el daño que recibes.",
+      } },
+    { name = "Discipline (Смайт: урон в простое)", drop = true },
+    { name = "Discipline (Shadowfiend: без Holy)", drop = true },
+    { name = "Discipline (Divine Fury)", variant = "disc",
+      title = { ru = "Послушание (танк, Великое исцеление)", en = "Discipline (tank, Greater Heal)", es = "Disciplina (tanque, Sanación superior)" },
+      ranks = {
+          [1] = {0,5,0,3,2,0,3,1,3,0,3,0,0,5,1,2,3,3,1,3,1,3,2,3,1,2,5,1},
+          [2] = {2,0,4,0,5,1,0,3},
+          [3] = {},
+      },
+      glyphs = { major = { 42408, 45756, 42400 }, minor = { 43374, 43370, 43371 } },
+      note = {
+          ru = "Вариант для лечения танка: вместо Защиты от заклинаний взято Божественное неистовство, Великое исцеление читается на полсекунды быстрее.",
+          en = "A tank healing variant: Divine Fury replaces Spell Warding, so Greater Heal casts half a second faster.",
+          es = "Variante para sanar al tanque: Furia divina en lugar de Custodia de hechizos, Sanación superior se lanza medio segundo antes.",
+      } },
+    { name = "Holy (Стандарт: гибкость)", variant = "holy",
+      title = { ru = "Свет (рейд)", en = "Holy (raid)", es = "Sagrado (banda)" },
+      glyphs = { major = { 42396, 42409, 45755 }, minor = { 43374, 43370, 43371 } },
+      note = {
+          ru = "Основная ветка для лечения рейда: Круг исцеления, Молитва восстановления и Молитва исцеления под Прозорливостью. Оберегающий дух бережёт танка.",
+          en = "The main raid healing build: Circle of Healing, Prayer of Mending and Prayer of Healing sped up by Serendipity. Guardian Spirit saves the tank.",
+          es = "La rama principal para sanar a la banda: Círculo de sanación, Rezo de alivio y Rezo de sanación acelerado por Serendipia. Espíritu guardián salva al tanque.",
+      } },
+    { name = "Holy (Soul Warding: спам ЩС)", drop = true },
+    { name = "Holy (Body and Soul)", variant = "holy",
+      title = { ru = "Свет (подвижные бои)", en = "Holy (movement fights)", es = "Sagrado (combates con movimiento)" },
+      ranks = {
+          [1] = {0,5,0,3,2,0,3,1,1,0,3},
+          [2] = {2,3,4,5,0,1,0,3,2,0,0,2,1,5,1,5,3,0,0,2,0,3,3,1,1,5,1},
+          [3] = {},
+      },
+      glyphs = { major = { 42396, 42409, 45755 }, minor = { 43374, 43370, 43371 } },
+      note = {
+          ru = "Для боёв, где рейд много бегает: Тело и душа ускоряет цель щита и снимает яд при Устранении болезни на себе. Взято за счёт двух очков Испытания веры.",
+          en = "For fights with a lot of running: Body and Soul speeds up the shielded target and cleanses a poison when you Abolish Disease on yourself. It costs two points of Test of Faith.",
+          es = "Para combates con mucho movimiento: Cuerpo y alma acelera al objetivo del escudo y quita un veneno al usar Suprimir enfermedad sobre ti. Cuesta dos puntos de Prueba de fe.",
+      } },
+    { name = "Shadow", variant = "shadow",
+      title = { ru = "Тьма (рейд)", en = "Shadow (raid)", es = "Sombra (banda)" },
+      glyphs = { major = { 42407, 42415, 45753 }, minor = { 43374, 43370, 43371 } },
+      note = {
+          ru = "Основная ветка: три дота, Взрыв разума по готовности, Пытка разума между ними. Подходит без 4 вещей Т10.",
+          en = "The main build: three DoTs, Mind Blast on cooldown, Mind Flay in between. Use it without the 4-piece T10 bonus.",
+          es = "La rama principal: tres efectos de daño en el tiempo, Explosión mental en cuanto esté lista y Tortura mental entre medias. Para jugar sin el bonus de 4 piezas de T10.",
+      } },
+    { name = "Shadow (4T10)", variant = "shadow",
+      title = { ru = "Тьма (с 4 вещами Т10)", en = "Shadow (with 4-piece T10)", es = "Sombra (con 4 piezas de T10)" },
+      ranks = {
+          [1] = {0,5,0,3,2,0,3,1},
+          [2] = {},
+          [3] = {3,2,5,2,2,3,0,0,1,2,2,3,0,1,2,3,2,3,1,5,2,3,0,1,3,5,1},
+      },
+      glyphs = { major = { 42407, 42415, 45753 }, minor = { 43374, 43370, 43371 } },
+      note = {
+          ru = "С бонусом 4 вещей Т10 Пытка разума важнее Взрыва разума: вместо Улучшенного взрыва разума взяты Крепкие объятия вампира и меньше угрозы.",
+          en = "With the 4-piece T10 bonus Mind Flay matters more than Mind Blast: Improved Mind Blast is traded for Improved Vampiric Embrace and lower threat.",
+          es = "Con el bonus de 4 piezas de T10 Tortura mental pesa más que Explosión mental: se cambia Explosión mental mejorada por Abrazo vampírico mejorado y menos amenaza.",
+      } },
+}
